@@ -1,1 +1,1 @@
-{"version":3,"sources":["main.js"],"names":["console","log"],"mappings":"AAAAA,OAAO,CAACC,GAAR,CAAY,IAAZ","file":"main.1f19ae8e.js","sourceRoot":"..\\src","sourcesContent":["console.log('hi')"]}
+{"version":3,"sources":["main.js"],"names":["console","log","test","parentNode","insertBefore"],"mappings":"AAAAA,OAAO,CAACC,GAAR,CAAYC,IAAI,CAACC,UAAL,CAAgBC,YAA5B","file":"main.1f19ae8e.js","sourceRoot":"..\\src","sourcesContent":["console.log(test.parentNode.insertBefore)"]}
