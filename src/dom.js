@@ -1,4 +1,5 @@
 window.dom = {
+  /* 增 */
   create(string) {
     const container = document.createElement('template')
     container.innerHTML = string.trim()

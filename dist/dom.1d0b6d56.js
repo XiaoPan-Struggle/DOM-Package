@@ -119,6 +119,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   return newRequire;
 })({"dom.js":[function(require,module,exports) {
 window.dom = {
+  /* 增 */
   create: function create(string) {
     var container = document.createElement('template');
     container.innerHTML = string.trim();
