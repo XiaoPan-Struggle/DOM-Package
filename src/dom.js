@@ -1,5 +1,7 @@
 window.dom = {
-  create(tagName) {
-    return document.createElement(tagName)
+  create(string) {
+    const container = document.createElement('template')
+    container.innerHTML = string.trim()
+    return container.content.firstChild
   }
 }
