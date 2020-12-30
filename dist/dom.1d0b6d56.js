@@ -137,6 +137,22 @@ window.dom = {
   wrap: function wrap(node, parent) {
     dom.before(node, parent);
     dom.append(parent, node);
+  },
+
+  /* 删 */
+  remove: function remove(node) {
+    node.parentNode.removeChild(node);
+    return node;
+  },
+  empty: function empty(node) {
+    var childNodes = node.childNodes;
+
+    for (var i = 0; i < childNodes.length; i++) {
+      dom.remove(childNodes[i]);
+      array.push(childNodes[i]);
+    }
+
+    return array;
   }
 };
 },{}],"../../../AppData/Local/Yarn/Data/global/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
