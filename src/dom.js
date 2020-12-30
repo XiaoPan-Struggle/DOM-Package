@@ -24,10 +24,20 @@ window.dom = {
     return node
   },
   empty(node) {
+    /* 
+    childNode.length 会随着删除而改变
+    */
+    //  const {childNodes} = node
+    // for(let i = 0; i < childNodes.length; i++) {
+    //   dom.remove(childNodes[i])
+    //   array.push(childNodes[i])
+    // }
     const {childNodes} = node
-    for(let i = 0; i < childNodes.length; i++) {
-      dom.remove(childNodes[i])
-      array.push(childNodes[i])
+    const array = []
+    let x = node.firstChild
+    while(x) {
+      array.push(dom.remove(node.firstChild))
+      x = node.firstChild
     }
     return array
   }

@@ -145,11 +145,21 @@ window.dom = {
     return node;
   },
   empty: function empty(node) {
+    /* 
+    childNode.length 会随着删除而改变
+    */
+    //  const {childNodes} = node
+    // for(let i = 0; i < childNodes.length; i++) {
+    //   dom.remove(childNodes[i])
+    //   array.push(childNodes[i])
+    // }
     var childNodes = node.childNodes;
+    var array = [];
+    var x = node.firstChild;
 
-    for (var i = 0; i < childNodes.length; i++) {
-      dom.remove(childNodes[i]);
-      array.push(childNodes[i]);
+    while (x) {
+      array.push(dom.remove(node.firstChild));
+      x = node.firstChild;
     }
 
     return array;
