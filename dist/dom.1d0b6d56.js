@@ -129,6 +129,9 @@ window.dom = {
   },
   before: function before(node, node2) {
     node.parentNode.insertBefore(node2, node);
+  },
+  append: function append(parent, node) {
+    parent.appendChild(node);
   }
 };
 },{}],"../../../AppData/Local/Yarn/Data/global/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
