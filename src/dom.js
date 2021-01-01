@@ -114,5 +114,9 @@ window.dom = {
   },
   children(node) {
     return node.children
+  },
+  siblings(node) {
+    // 将伪数组变成数组，使用filter过滤自己
+    return Array.from(node.parentNode.children).filter(n => n !== node)
   }
 }
