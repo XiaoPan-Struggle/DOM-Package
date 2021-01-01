@@ -48,5 +48,20 @@ window.dom = {
     }else if(arguments.length === 2) {
       return node.getAttribute(name)
     }
+  },
+  text(node, string) {
+    if(arguments.length === 2) {
+      if('innerText' in node) {
+        node.innerText = string
+      }else {
+        node.textContent = string
+      }
+    }else if(arguments.length === 1) {
+      if('innerText' in node) {
+        return node.innerText
+      }else {
+        return node.textContent
+      }
+    }
   }
 }
