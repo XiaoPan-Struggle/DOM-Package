@@ -126,5 +126,12 @@ window.dom = {
       x = x.nextSibling
     }
     return x 
+  },
+  previous(node) {
+    let x = node.previousSibling
+    while(x && x.nodeType === 3) {
+      x = x.previousSibling
+    }
+    return x
   }
 }
