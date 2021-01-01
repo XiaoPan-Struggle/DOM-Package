@@ -94,6 +94,9 @@ window.dom = {
     },
     remove(node, className) {
       node.classList.remove(className)
+    },
+    has(node, className) {
+      return node.classList.contains(className)
     }
   }
 }
