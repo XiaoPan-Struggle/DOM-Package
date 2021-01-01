@@ -111,5 +111,8 @@ window.dom = {
   },
   parent(node) {
     return node.parentNode
+  },
+  children(node) {
+    return node.children
   }
 }
