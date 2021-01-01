@@ -138,5 +138,15 @@ window.dom = {
     for(let i = 0; i < nodeList.length; i++) {
       fn.call(null, nodeList[i])
     }
+  },
+  index(node) {
+    const list = dom.children(node.parentNode)
+    let i
+    for(i = 0; i < list.length; i++) {
+      if(list[i] === node){
+        break
+      }
+    }
+    return i
   }
 }
