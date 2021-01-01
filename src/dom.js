@@ -104,5 +104,9 @@ window.dom = {
   },
   off(node, eventName, fn) {
     node.removeEventListener(eventName, fn)
+  },
+  /* 查 */
+  find(selector, scope) {
+    return (scope || document).querySelectorAll(selector)
   }
 }
