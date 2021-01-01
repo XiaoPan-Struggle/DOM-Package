@@ -91,6 +91,9 @@ window.dom = {
   class: {
     add(node, className) {
       node.classList.add(className)
+    },
+    remove(node, className) {
+      node.classList.remove(className)
     }
   }
 }
