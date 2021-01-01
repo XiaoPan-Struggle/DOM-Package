@@ -118,5 +118,13 @@ window.dom = {
   siblings(node) {
     // 将伪数组变成数组，使用filter过滤自己
     return Array.from(node.parentNode.children).filter(n => n !== node)
+  },
+  next(node) {
+    let x = node.nextSibling
+    // nodeType === 3 就是文本节点
+    while(x && x.nodeType === 3) {
+      x = x.nextSibling
+    }
+    return x 
   }
 }
