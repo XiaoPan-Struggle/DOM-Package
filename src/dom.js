@@ -40,5 +40,13 @@ window.dom = {
       x = node.firstChild
     }
     return array
+  },
+  /* 改 */
+  attr(node, name, value) {
+    if(arguments.length === 3) {
+      node.setAttribute(name, value)
+    }else if(arguments.length === 2) {
+      return node.getAttribute(name)
+    }
   }
 }
