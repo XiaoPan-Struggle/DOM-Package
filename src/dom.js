@@ -101,5 +101,8 @@ window.dom = {
   },
   on(node, eventName, fn) {
     node.addEventListener(eventName, fn)
+  },
+  off(node, eventName, fn) {
+    node.removeEventListener(eventName, fn)
   }
 }
