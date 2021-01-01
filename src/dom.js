@@ -108,5 +108,8 @@ window.dom = {
   /* 查 */
   find(selector, scope) {
     return (scope || document).querySelectorAll(selector)
+  },
+  parent(node) {
+    return node.parentNode
   }
 }
